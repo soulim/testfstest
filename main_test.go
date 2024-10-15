@@ -29,7 +29,7 @@ func TestTestFS(t *testing.T) {
 			ts0 = time.Now()
 			err := fstest.TestFS(os.DirFS(dir), filepath.Base(file))
 			ts1 = time.Now()
-			t.Logf("DirFS() time: %v", ts1.Sub(ts0))
+			t.Logf("TestFS() time: %v", ts1.Sub(ts0))
 			if err != nil {
 				t.Fatal(err)
 			}
